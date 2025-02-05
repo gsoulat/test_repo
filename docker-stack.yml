@@ -1,8 +1,6 @@
 services:
   api:
-    build:
-      image: ghcr.io/gsoulat/test_repo:${COMMIT_HASH:-latest}
-      restart: on-failure
+    image: ghcr.io/gsoulat/test_repo:${COMMIT_HASH:-latest}
     deploy:
       mode: replicated
       replicas: 3
