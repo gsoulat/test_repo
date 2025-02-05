@@ -7,15 +7,15 @@ services:
       mode: replicated
       replicas: 3
       update_config:
-          order: start-first
-          failure_action: rollback
-          delay: 10s
-        rollback_config:
-          parallelism: 1
-          delay: 10s
-        restart_policy:
-          condition: any
-          delay: 5s
+        order: start-first
+        failure_action: rollback
+        delay: 10s
+      rollback_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: any
+        delay: 5s
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8087/health"]
       interval: 30s
