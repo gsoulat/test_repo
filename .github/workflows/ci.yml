@@ -89,8 +89,6 @@ jobs:
         run: |
           echo "DOMAIN_NAME=${{ secrets.DOMAIN_NAME }}" > .env
           echo "COMMIT_HASH=${{ github.sha }}" >> .env
-          echo "COMMIT_HASH: $COMMIT_HASH"
-          echo "DOMAIN_NAME: $DOMAIN_NAME"
 
       - name: Copy files to VPS
         run: |
