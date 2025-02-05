@@ -111,7 +111,7 @@ services:
 
 volumes:
   postgres_data:
-  letsencrypt:
+  letsencrypt_data:
 
 secrets:
   postgres_password:
