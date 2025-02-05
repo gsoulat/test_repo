@@ -104,7 +104,7 @@ volumes:
 
 secrets:
   postgres_password:
-    file: ./secrets/postgres_password.txt
+    external: true
   postgres_user:
-    file: ./secrets/postgres_user.txt
+    external: true
 
