@@ -101,8 +101,7 @@ jobs:
       - name: Deploy to VPS
         run: |
           ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "\
-            DOMAIN_NAME=${{ secrets.DOMAIN_NAME }} \
-            COMMIT_HASH=${{ github.sha }} \
+            set -a && . ~/.env && set +a && \
             docker stack deploy \
             --with-registry-auth \
             --compose-file docker-stack.yml \
