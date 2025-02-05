@@ -39,7 +39,6 @@ services:
              python sample_api.py"
     depends_on:
       db:
-        condition: service_healthy
     secrets:
       - postgres_password
       - postgres_user
