@@ -1,8 +1,7 @@
 import os
-import time
 
 import asyncpg
-from quart import Quart, Response, g, jsonify, request
+from quart import Quart, g, jsonify
 from quart_cors import cors  # Pour gérer les CORS
 
 app = Quart(__name__)
